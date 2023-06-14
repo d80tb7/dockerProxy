@@ -1,0 +1,49 @@
+# GoLand IDE
+.idea/
+
+# Go Modules
+/go.sum
+
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# Compiled Go binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go test cache and test results
+/test
+/.testcache
+
+# Generated files by go generate
+*_gen.go
+
+# Dependency directories
+/vendor/
+/go.mod
+/go.sum
+
+# Build output directories
+/out/
+/dist/
+
+# Exclude the binary from the repository
+/bin/
+
+# Exclude coverage reports
+/coverage/
+
+# Exclude the cache directory for gopls
+/.cache/
+
+# Exclude the workspace files
+/workspace/
+
+# Visual Studio Code (VSCode)
+.vscode/
+.settings/
