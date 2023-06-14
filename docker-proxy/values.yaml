@@ -1,0 +1,18 @@
+config:
+  serverPort: "8080"
+  useTLS: false
+  certFilePath: "/etc/dockerProxy/tls/tls.crt"
+  keyFilePath: "/etc/dockerProxy/tls/tls.skey"
+  readTimeout: "5m"
+  writeTimeout: "5m"
+  idleTimeout: "10m"
+  cacheEvictionPeriod: "10m"
+
+service:
+  type: NodePort
+  nodePort: 30000
+
+certManager:
+  enabled: true
+  issuerName: "letsencrypt-prod"
+  tlsSecretName: "dockerproxy-tls"

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "dockerProxy.fullname" . }}
+data:
+  config.yaml: |-
+    serverPort: {{ .Values.config.serverPort }}
+    useTLS: {{ .Values.config.useTLS }}
+    certFilePath: {{ .Values.config.certFilePath }}
+    keyFilePath: {{ .Values.config.keyFilePath }}
+    readTimeout: {{ .Values.config.readTimeout }}
+    writeTimeout: {{ .Values.config.writeTimeout }}
+    idleTimeout: {{ .Values.config.idleTimeout }}
+    cacheEvictionPeriod: {{ .Values.config.cacheEvictionPeriod }}
